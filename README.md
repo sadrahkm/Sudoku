@@ -13,5 +13,5 @@ Install npm packages.
 ```
 npm install
 ```
-It's done! You can [visit the game](http://127.0.0.1:3000/) on port 3000 of you localhost.
+It's done! You can [visit the game](http://127.0.0.1:3000/) on port 3000 of your localhost.
 Also, the other player can join you on the same port.
