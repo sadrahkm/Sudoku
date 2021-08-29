@@ -67,7 +67,7 @@ $(document).ready(function () {
         $("#boardWrapper").append(`
         <button id="btn-${
           arrayIndex + "" + index
-        }" class="bg-primary rounded-md bg-opacity-50 w-14 h-14 mb-1 -mr-1 flex justify-center items-center">
+        }" class="bg-primary rounded-md bg-opacity-50 w-full h-14 flex justify-center items-center">
         <span class="text-gray-700 font-bold text-2xl">${item}</span>
         </button>
         `);
