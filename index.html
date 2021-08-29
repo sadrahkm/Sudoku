@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sudoku</title>
+    <!-- <link href="../tailwind.css" rel="stylesheet" /> -->
+    <link href="./static/tailwind.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="welcome" class="max-w-2xl mx-auto text-center mt-48">
+      <h1 class="text-primary font-extrabold text-5xl">Online Sudoku</h1>
+      <div class="flex mt-10 justify-center">
+        <input
+          type="text"
+          id="createName"
+          class="mr-2 w-52 px-3 py-3 border-gray-300 border rounded-lg"
+          placeholder="Enter your name"
+        />
+        <button
+          id="create"
+          class="
+            focus:outline-none
+            border-none
+            bg-primary
+            text-white
+            py-3
+            px-5
+            rounded-lg
+            focus:ring focus:ring-primary focus:ring-offset-2
+            shadow-lg
+          "
+        >
+          Start Game
+        </button>
+      </div>
+      <div class="flex mt-10 justify-center">
+        <input
+          type="text"
+          id="joinName"
+          class="mr-2 w-52 px-3 py-3 border-gray-300 border rounded-lg"
+          placeholder="Enter your name"
+        />
+        <input
+          type="text"
+          id="roomNumber"
+          class="mr-2 w-52 px-3 py-3 border-gray-300 border rounded-lg"
+          placeholder="Enter room number"
+        />
+        <button
+          id="join"
+          class="
+            focus:outline-none
+            border-none
+            bg-primary
+            text-white
+            py-3
+            px-5
+            rounded-lg
+            focus:ring focus:ring-primary focus:ring-offset-2
+            shadow-lg
+          "
+        >
+          Join Game
+        </button>
+      </div>
+      <div
+        id="room-message"
+        class="
+          mt-8
+          px-3
+          py-2
+          bg-primary
+          w-8/12
+          mx-auto
+          rounded-xl
+          text-white
+          shadow-md
+          hidden
+        "
+      >
+        <p></p>
+      </div>
+    </div>
+
+    <div id="board" style="display: none">
+      <div class="flex flex-col max-w-4xl mx-auto">
+        <div class="border-b-2 border-gray-200 py-5 px-2 flex justify-between">
+          <div id="player1Wrapper">
+            <h3 class="text-text font-semibold text-2xl mb-2">__</h3>
+            <p class="text-left font-medium text-secondary pl-2">
+              Score: <span>__</span>
+            </p>
+          </div>
+          <div id="player2Wrapper">
+            <h3 class="text-text font-semibold text-2xl mb-2">__</h3>
+            <p class="text-right font-medium text-secondary pr-2">
+              Score: <span>__</span>
+            </p>
+          </div>
+        </div>
+        <div>
+          <div>
+            <div id="square" class="w-8/12 mb-2 mx-auto mt-12">
+              <div id="boardWrapper" class="grid grid-cols-9 grid-rows-9"></div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-9 mb-20">
+          <div class="flex flex-col">
+            <div class="flex justify-center">
+              <input
+                type="text"
+                id="row"
+                class="mr-2 w-20 px-3 py-3 border-gray-300 border rounded-lg"
+                placeholder="Row"
+              />
+              <input
+                type="text"
+                id="column"
+                class="mr-2 w-20 px-3 py-3 border-gray-300 border rounded-lg"
+                placeholder="Column"
+              />
+              <input
+                type="text"
+                id="numberValue"
+                class="mr-2 w-52 px-3 py-3 border-gray-300 border rounded-lg"
+                placeholder="Number"
+              />
+              <button
+                id="sendBtn"
+                class="
+                  focus:outline-none
+                  border-none
+                  bg-primary
+                  text-white
+                  py-3
+                  px-5
+                  rounded-lg
+                  focus:ring focus:ring-primary focus:ring-offset-2
+                  shadow-lg
+                "
+              >
+                Submit
+              </button>
+            </div>
+            <div
+              id="game-message"
+              class="
+                mt-8
+                px-3
+                py-2
+                bg-primary
+                w-8/12
+                mx-auto
+                rounded-xl
+                text-white
+                shadow-md
+                hidden
+                text-center
+              "
+            >
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./static/main.js"></script>
+  </body>
+</html>
