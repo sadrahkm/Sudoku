@@ -4,14 +4,18 @@ An online Sudoku game that can be played by two players throughout the network
 ![](screenshot.png)
 
 ## Installation
-Clone the repository.
+Clone the repository
 ```
 git clone https://github.com/sadrahkm/Sudoku.git
 cd Sudoku
 ```
-Install npm packages.
+Install npm packages
 ```
 npm install
+```
+Run NodeJs
+```
+node app.js
 ```
 It's done! You can [visit the game](http://127.0.0.1:3000/) on port 3000 of your localhost.
 Also, the other player can join you on the same port.
